@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "ResourceComponent",
+  "description": "A ResourceComponent describes an IaC Module. It is typically intimately linked to the source code that constitutes the Module, and should be what a developer may regard a \"unit of infrastructure\", usually with a distinct deployable artifact.",
+  "examples": [
+    {
+      "apiVersion": "backstage.io/v1alpha1",
+      "kind": "ResourceComponent",
+      "metadata": {
+        "name": "LoremService",
+        "description": "Creates Lorems like a pro.",
+        "labels": {
+          "product_name": "Random value Generator"
+        },
+        "annotations": {
+          "docs": "https://github.com/..../tree/develop/doc"
+        }
+      },
+      "spec": {
+        "type": "terraform",
+        "lifecycle": "production",
+        "owner": "platform-team"
+      }
+    }
+  ],
+  "allOf": [
+    {
+      "$ref": "Entity"
+    },
+    {
+      "type": "object",
+      "required": ["spec"],
+      "properties": {
+        "apiVersion": {
+          "enum": ["backstage.io/v1alpha1", "backstage.io/v1beta1"]
+        },
+        "kind": {
+          "enum": ["ResourceComponent"]
+        },
+        "spec": {
+          "type": "object",
+          "required": ["type", "lifecycle", "owner"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "description": "The type of IaC Module.",
+              "examples": ["terraform", "Cloudformation", "Pulumi", "AWS CDK"],
+              "minLength": 1
+            },
+            "lifecycle": {
+              "type": "string",
+              "description": "The lifecycle state of the resource component.",
+              "examples": ["experimental", "production", "deprecated"],
+              "minLength": 1
+            },
+            "owner": {
+              "type": "string",
+              "description": "An entity reference to the owner of the resource component.",
+              "examples": ["platform-team", "user:john.johnson"],
+              "minLength": 1
+            },
+            "environment": {
+              "type": "string",
+              "description": "An entity reference to the environment that the component belongs to.",
+              "minLength": 1
+            },
+            "subcomponentOf": {
+              "type": "string",
+              "description": "An entity reference to another component of which the component is a part.",
+              "minLength": 1
+            },
+            "providesVariables": {
+              "type": "array",
+              "description": "An array of entity references to the variables that configure the resource component.",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "dependsOn": {
+              "type": "array",
+              "description": "An array of references to other entities that the component depends on to function.",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
