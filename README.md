@@ -13,8 +13,8 @@ You must have a Backstage app running. If not you can create one with `npx @back
 
 ### Folders
 
-* customer-common - contains the definition of our Customer entity, extremely simplified. This was buily by copying the https://github.com/backstage/backstage/tree/master/plugins/scaffolder-common package and removing unnecessary stuff.
-* customer-backend - contains the validation logic used by Backstage to ensure our entity works correctly. This was generated with `yarn new --select backend-plugin` and modified to remove unnecessary stuff.
+* iac-support-common - contains the definition of the Environment and ResourceComponent entities, extremely simplified. This was built by looking at the https://github.com/backstage/backstage/tree/master/packages/catalog-model/src/kinds and https://github.com/backstage/backstage/tree/master/packages/catalog-model/src/schema code for the existing entities
+* iac-support-backend - contains the validation logic used by Backstage to ensure our entities work correctly, and generate teh right relation lines. Again, I use the processors in these folders to help, but the best pointer I got was from the Backstage Discord support bods and the creation of the doEmit function.
 
 ### Using
 
