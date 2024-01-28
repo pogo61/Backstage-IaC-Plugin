@@ -1,5 +1,5 @@
 {
-  "name": "@internal/plugin-catalog-backend-module-iacsupport-entity-model",
+  "name": "@internal/plugin-iac-support-backend",
   "description": "Adds support for the IaC Support specific entity model (e.g. the Template kind) to the catalog backend plugin.",
   "version": "0.1.0",
   "main": "src/index.ts",
