@@ -2,7 +2,7 @@
 I wished to extend the Entity Model use in Backstage to support first class entities that represented IaC environments and modules.
 
 I planned to extend the model as per this diagram, adding the Environment and ResourceComponent entities:
-![ScreenShot](/Users/paulpog/IdeaProjects/Backstage-IaC-Plugin/Untitled Diagram.drawio.png)
+![](Untitled Diagram.drawio.png)
 The Environment entity being analogous to the System entity, and the ResourceComponent analogous to the Component. That is having IaC equivalents of the existing, software-centred, entities.  
 
 I found the docs at https://backstage.io/docs/features/software-catalog/extending-the-model#implementing-custom-model-extensions to be very difficult to follow, especially in terms of connecting the dots on all the pieces that need to be configured. Hopefully this will find an audience that want the same capability, but also help people understand what is needed to extend the Backend model. <3
