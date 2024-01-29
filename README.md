@@ -51,7 +51,7 @@ You must have a Backstage app running. If not you can create one with `npx @back
         entityFilename: catalog-info.yaml
         pullRequestBranchName: backstage-integration
     rules:
-        - allow: [Component, System, API, Resource, Location, Group, Domain, Environment, ResourceComponent, Template]
+        - allow: [...., Group, Domain, Environment, ResourceComponent, Template]
     ```
 * 8\. Fire up Backstage `yarn dev`
 
