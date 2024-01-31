@@ -24,14 +24,16 @@
     "postpack": "backstage-cli package postpack"
   },
   "devDependencies": {
-    "@backstage/cli": "workspace:^"
+    "@backstage/cli": "^0.25.1"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@backstage/catalog-model": "workspace:^",
-    "@backstage/plugin-permission-common": "workspace:^",
-    "@backstage/types": "workspace:^"
+    "@backstage/catalog-model": "^1.4.3",
+    "@backstage/plugin-permission-common": "^0.7.12",
+    "@backstage/plugin-catalog-node": "^1.6.1",
+    "@backstage/backend-plugin-api": "^0.6.9",
+    "@backstage/types": "^1.1.1"
   }
 }
