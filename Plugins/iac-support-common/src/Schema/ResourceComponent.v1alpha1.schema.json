@@ -60,14 +60,12 @@
               "minLength": 1
             },
             "environment": {
-              "type": "string",
-              "description": "An entity reference to the environment that the component belongs to.",
-              "minLength": 1
-            },
-            "subcomponentOf": {
-              "type": "string",
-              "description": "An entity reference to another component of which the component is a part.",
-              "minLength": 1
+              "type": "array",
+              "description": "An array of entity references to the environment(s) that the resource component belongs to.",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
             },
             "providesVariables": {
               "type": "array",
