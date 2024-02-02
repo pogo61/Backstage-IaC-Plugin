@@ -62,4 +62,4 @@ See the example repo I have created to demonstrate the plugin use,  https://gith
 
 **Note: the new entities will not show up in your "Home" page Component drop-down list until you create at least one of them**
 
-**Please look out for a Medium Article I'll write to explain this plugin**
+**Please look out for a [Medium Article](https://medium.com/@paulpogonoski/backstage-iac-support-392f34ea118e) that describes using this in detail**
