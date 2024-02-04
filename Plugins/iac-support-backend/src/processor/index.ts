@@ -1,1 +1,0 @@
-export { IacSupportEntitiesProcessor } from './IacSupportEntitiesProcessor';

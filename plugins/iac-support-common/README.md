@@ -1,4 +1,4 @@
-# @backstage/plugin-iac-support-common
+# @paulpogo/plugin-iac-support-common
 
 Welcome to the common package for the iac-support plugin!
 

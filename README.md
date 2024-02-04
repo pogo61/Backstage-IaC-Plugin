@@ -31,7 +31,7 @@ You must have a Backstage app running. If not you can create one with `npx @back
    ```
    import ....
    import { ScaffolderEntitiesProcessor } from '@backstage/plugin-catalog-backend-module-scaffolder-entity-model';
-   import { IacSupportEntitiesProcessor } from '@internal/plugin-iac-support-backend';
+   import { IacSupportEntitiesProcessor } from '@paulpogo/plugin-iac-support-backend';
    import ....
    
    export default async function createPlugin(

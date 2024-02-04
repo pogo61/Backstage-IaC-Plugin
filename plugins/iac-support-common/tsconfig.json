@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": [
+    "src",
+    "dev",
+    "migrations",
+    "./*"
+  ],
+  "compilerOptions": {
+    "outDir": "dist-types",
+    "rootDir": ".",
+    "declaration": true,
+    "emitDeclarationOnly": true
+  }
+}

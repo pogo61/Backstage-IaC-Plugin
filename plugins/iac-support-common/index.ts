@@ -4,16 +4,16 @@
  * @packageDocumentation
  */
 
-export {
+export type {
   environmentEntityValidator
-} from './EnvironmentEntity';
+} from './src/EnvironmentEntity';
 export type {
   EnvironmentEntity
-} from './EnvironmentEntity';
+} from './src/EnvironmentEntity';
 
-export {
+export type {
   resourceComponentEntityValidator
-} from './ResourceComponentEntity';
+} from './src/ResourceComponentEntity';
 export type {
   ResourceComponentEntity
-} from './ResourceComponentEntity';
+} from './src/ResourceComponentEntity';

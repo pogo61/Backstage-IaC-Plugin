@@ -1,21 +1,13 @@
 {
-  "name": "backstage-iac-plugin",
+  "name": "@paulpogo/iac-support",
   "version": "1.0.0",
-  "description": "",
+  "description": "This Plugin creates Catalogue entities for IaC in backstage",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pogo61/Backstage-IaC-Plugin.git"
-  },
-  "private": true,
-  "dependencies": {
-    "@backstage/catalog-model": "^1.4.3",
-    "@backstage/plugin-catalog-node": "^1.6.1",
-    "@backstage/plugin-permission-common": "^0.7.12",
-    "@backstage/types": "^1.1.1",
-    "@backstage/backend-plugin-api": "^0.6.9"
+    "url": "git+https://github.com/pogo61/Backstage-IaC-Plugin.git"
   }
 }

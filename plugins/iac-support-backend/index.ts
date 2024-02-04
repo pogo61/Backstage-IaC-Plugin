@@ -4,5 +4,5 @@
  * @packageDocumentation
  */
 
-export * from './processor';
-export { catalogModuleIacSupportEntityModel as default } from './module';
+export * from './src/IacSupportEntitiesProcessor';
+export type { catalogModuleIacSupportEntityModel as default } from './src/module';

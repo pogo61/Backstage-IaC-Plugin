@@ -1,15 +1,18 @@
 {
-  "name": "@internal/plugin-iac-support-backend",
+  "name": "@paulpogo/plugin-iac-support-backend",
   "description": "Adds support for the IaC Support specific entity model (e.g. the Template kind) to the catalog backend plugin.",
-  "version": "0.1.0",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
-  "license": "Apache-2.0",
+  "version": "0.1.8",
+  "license": "MIT",
+  "main": "index.ts",
+  "types": "index.ts",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts"
   },
   "exports": {
-    ".": "./src/index.ts",
+    ".": "./index.ts",
     "./package.json": "./package.json"
   },
   "typesVersions": {
@@ -24,6 +27,8 @@
   },
   "scripts": {
     "start": "backstage-cli package start",
+    "tsc": "tsc",
+    "tsc:full": "tsc --skipLibCheck false --incremental false",
     "build": "backstage-cli package build",
     "lint": "backstage-cli package lint",
     "test": "backstage-cli package test",
@@ -36,14 +41,16 @@
     "@backstage/catalog-model": "^1.4.3",
     "@backstage/plugin-catalog-common": "^1.0.20",
     "@backstage/plugin-catalog-node": "^1.6.1",
-    "@internal/plugin-iac-support-common": "^0.1.0",
-    "@backstage/plugin-scaffolder-common": "^1.4.5"
+    "@backstage/plugin-scaffolder-common": "^1.4.5",
+    "@paulpogo/plugin-iac-support-common": "^0.1.6"
   },
   "devDependencies": {
     "@backstage/backend-test-utils": "^0.2.10",
     "@backstage/cli": "^0.25.1"
   },
   "files": [
-    "dist"
+    "dist",
+    "dist-types",
+    "config.d.ts"
   ]
 }
