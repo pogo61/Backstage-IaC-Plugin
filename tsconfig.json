@@ -1,0 +1,17 @@
+{
+  "include": [
+    "plugins/*/src",
+    "plugins/*/dev",
+    "plugins/*/migrations"
+  ],
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es2021",
+    "outDir": "dist",
+    "rootDir": ".",
+    "module": "CommonJS",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "useUnknownInCatchVariables": false
+  }
+}

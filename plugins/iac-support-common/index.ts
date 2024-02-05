@@ -6,14 +6,14 @@
 
 export {
   environmentEntityValidator
-} from './EnvironmentEntity';
-export type {
+} from './src/EnvironmentEntity';
+export  {
   EnvironmentEntity
-} from './EnvironmentEntity';
+} from './src/EnvironmentEntity';
 
 export {
   resourceComponentEntityValidator
-} from './ResourceComponentEntity';
-export type {
+} from './src/ResourceComponentEntity';
+export  {
   ResourceComponentEntity
-} from './ResourceComponentEntity';
+} from './src/ResourceComponentEntity';

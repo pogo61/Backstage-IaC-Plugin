@@ -1,0 +1,43 @@
+{
+  "name": "@paulpogo/plugin-iac-support-common",
+  "description": "Common functionalities for the iac-support plugin",
+  "engines": {
+    "node": "18 || 20"
+  },
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.ts",
+  "types": "index.d.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "package.json": [
+        "package.json"
+      ]
+    }
+  },
+  "backstage": {
+    "role": "common-library"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "@backstage/cli": "^0.25.1"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "@backstage/catalog-model": "^1.4.3",
+    "@backstage/plugin-permission-common": "^0.7.12",
+    "@backstage/plugin-catalog-node": "^1.6.1",
+    "@backstage/backend-plugin-api": "^0.6.9",
+    "@backstage/types": "^1.1.1"
+  }
+}
