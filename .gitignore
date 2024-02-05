@@ -1,3 +1,7 @@
 .idea/
 /node_modules/.yarn-integrity
 /node_modules/
+/plugins/iac-support-backend/dist/
+/plugins/iac-support-common/dist/
+/plugins/iac-support-common/node_modules/
+/plugins/iac-support-backend/node_modules/
