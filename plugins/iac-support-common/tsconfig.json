@@ -1,13 +1,12 @@
 {
   "extends": "../../tsconfig.json",
   "include": [
-    "src",
-    "dev",
-    "migrations",
+    "src/*",
     "./*"
   ],
+  "exclude": ["node_modules"],
   "compilerOptions": {
-    "outDir": "dist-types",
+    "outDir": "dist",
     "rootDir": ".",
     "declaration": true,
     "emitDeclarationOnly": true

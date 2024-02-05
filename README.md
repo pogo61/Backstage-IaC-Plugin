@@ -18,16 +18,17 @@ You must have a Backstage app running. If not you can create one with `npx @back
 
 ### Using
 
-* 1\. Go to the  root directory of the Backstage app you created (the default is the backstage dir, so i'll use that as a reference here).
-* 2\. Create the requisite wiring for a backstage backend plugin by using this command:
-  * 2\.1 `yarn new --select backend-plugin`
-  * 2\.2 use the value 'iac-support' when prompted for the backend plugin name
-* 3\. Copy the iac-support-backend folder from the repo's plugins/ folder replacing the same in the  plugins/ folder of your backstage app
-* 4\. Create the requisite wiring for a common backend plugin by using this command:
-  * 4\.1 `yarn new --select plugin-common`
-  * 4\.2 use the value 'iac-support' when prompted for the backend plugin name
-* 5\. Copy the iac-support-common folder from the repo's plugins/ folder replacing the same in the  plugins/ folder of your backstage app
-* 6\. Modify packages/backend/src/plugins/catalog.ts to include a reference to our new processor:
+1. Go to the  root directory of the Backstage app you created (the default is the backstage dir, so I'll use that as a reference here).
+2. Type `yarn --cwd packages/backend add @paulpogo/plugin-iac-support-backend` to install the plugin. Ensure that the plugin has installed by ensuring you see the following `success Saved lockfile.
+success Saved 3 new dependencies.
+info Direct dependencies
+info All dependencies
+├─ @paulpogo/plugin-iac-support-backend@1.0.0
+├─ @paulpogo/plugin-iac-support-common@1.0.0
+└─ app@0.0.0
+✨  Done in 13.49s. `
+
+3. Modify packages/backend/src/plugins/catalog.ts to include a reference to our new processor:
    ```
    import ....
    import { ScaffolderEntitiesProcessor } from '@backstage/plugin-catalog-backend-module-scaffolder-entity-model';

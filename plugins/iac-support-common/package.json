@@ -1,16 +1,13 @@
 {
   "name": "@paulpogo/plugin-iac-support-common",
   "description": "Common functionalities for the iac-support plugin",
-  "version": "0.1.6",
+  "engines": {
+    "node": "18 || 20"
+  },
+  "version": "1.0.0",
   "license": "MIT",
   "main": "index.ts",
-  "types": "index.ts",
-  "publishConfig": {
-    "access": "public",
-    "main": "dist/index.cjs.js",
-    "module": "dist/index.esm.js",
-    "types": "dist/index.d.ts"
-  },
+  "types": "index.d.ts",
   "exports": {
     ".": "./index.ts",
     "./package.json": "./package.json"
@@ -27,22 +24,14 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "backstage-cli package build",
-    "tsc": "tsc",
-    "tsc:full": "tsc --skipLibCheck false --incremental false",
-    "lint": "backstage-cli package lint",
-    "test": "backstage-cli package test",
-    "clean": "backstage-cli package clean",
-    "prepack": "backstage-cli package prepack",
-    "postpack": "backstage-cli package postpack"
+    "tsc": "tsc"
   },
   "devDependencies": {
     "@backstage/cli": "^0.25.1"
   },
   "files": [
-      "dist",
-      "dist-types",
-      "config.d.ts"
+    "dist",
+    "src"
   ],
   "dependencies": {
     "@backstage/catalog-model": "^1.4.3",
