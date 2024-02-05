@@ -45,7 +45,8 @@ info All dependencies
    }
 
     ```
-* 7\. In app-config.yaml, add the following entities to the catalog/rules/allow list:
+
+4. In app-config.yaml, add the following entities to the catalog/rules/allow list:
     ```
     catalog:
     import:
@@ -54,7 +55,8 @@ info All dependencies
     rules:
         - allow: [...., Group, Domain, Environment, ResourceComponent, Template]
     ```
-* 8\. Fire up Backstage `yarn dev`
+
+5. Fire up Backstage `yarn dev`
 
 ### Ready to go
 

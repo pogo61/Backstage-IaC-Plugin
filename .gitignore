@@ -5,3 +5,5 @@
 /plugins/iac-support-common/dist/
 /plugins/iac-support-common/node_modules/
 /plugins/iac-support-backend/node_modules/
+/plugins/iac-support-common/yarn.lock
+/plugins/iac-support-backend/yarn.lock
