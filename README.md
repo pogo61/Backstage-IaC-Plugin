@@ -19,14 +19,16 @@ You must have a Backstage app running. If not you can create one with `npx @back
 ### Using
 
 1. Go to the  root directory of the Backstage app you created (the default is the backstage dir, so I'll use that as a reference here).
-2. Type `yarn --cwd packages/backend add @paulpogo/plugin-iac-support-backend` to install the plugin. Ensure that the plugin has installed by ensuring you see the following `success Saved lockfile.
+2. Type `yarn --cwd packages/backend add @paulpogo/plugin-iac-support-backend` to install the plugin. Ensure that the plugin has installed by ensuring you see the following 
+```success Saved lockfile.
 success Saved 3 new dependencies.
 info Direct dependencies
 info All dependencies
 ├─ @paulpogo/plugin-iac-support-backend@1.0.0
 ├─ @paulpogo/plugin-iac-support-common@1.0.0
 └─ app@0.0.0
-✨  Done in 13.49s. `
+✨  Done in 13.49s. 
+```
 
 3. Modify packages/backend/src/plugins/catalog.ts to include a reference to our new processor:
    ```
