@@ -23,6 +23,7 @@ export interface ResourceComponentEntity extends Entity {
     owner: string;
     subcomponentOf?: string;
     providesVariables?: string[];
+    parent?: string[];
     dependsOn?: string[];
     environment?: string;
   };
