@@ -1,5 +1,6 @@
 import {
   Entity,
+  entityKindSchemaValidator,
   KindValidator,
 } from '@backstage/catalog-model';
 import schema from './Schema/ResourceComponent.v1alpha1.schema.json';
@@ -34,5 +35,13 @@ export interface ResourceComponentEntity extends Entity {
  *
  * @public
  */
-export const resourceComponentEntityValidator =
-  ajvCompiledJsonSchemaValidator(schema);
+// export const resourceComponentEntityValidator =
+//   ajvCompiledJsonSchemaValidator(schema);
+
+const validator = entityKindSchemaValidator(schema);
+
+export const resourceComponentEntityValidator: KindValidator = {
+  async check(data: Entity) {
+    return validator(data) === data;
+  },
+};

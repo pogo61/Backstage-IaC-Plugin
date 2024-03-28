@@ -1,3 +1,9 @@
 # @paulpogo/plugin-iac-support-backend
 
-Adds support for the scaffolder specific entity model (e.g. the Template kind) to the catalog backend plugin.
+This Package supplies the `"backend"` components for the IaC Support Backstage plugin.
+
+To build it use the `yarn --tsc` command
+
+To create the package use the `yarn tsc` command
+
+To push the package to the NPM repo use `npm publish --access public` 

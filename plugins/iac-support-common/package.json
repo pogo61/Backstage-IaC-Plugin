@@ -4,19 +4,21 @@
   "engines": {
     "node": "18 || 20"
   },
-  "version": "1.1.0",
+  "version": "0.1.60",
   "license": "MIT",
-  "main": "index.ts",
+  "packageManager": "yarn@1.22.22",
+  "main": "./dist/index.js",
   "types": "index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
-    ".": "./index.ts",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    ".": "./dist/index.js"
   },
   "typesVersions": {
     "*": {
-      "package.json": [
-        "package.json"
-      ]
+      "package.json": ["package.json"]
     }
   },
   "backstage": {
@@ -24,20 +26,16 @@
   },
   "sideEffects": false,
   "scripts": {
-    "tsc": "tsc"
+    "build": "tsc"
   },
-  "devDependencies": {
-    "@backstage/cli": "^0.25.1"
+  "dependencies": {
+    "@backstage/backend-plugin-api": "^0.6.9",
+    "@backstage/catalog-model": "^1.4.3",
+    "@backstage/plugin-catalog-node": "^1.6.1",
+    "@backstage/plugin-permission-common": "^0.7.12",
+    "@backstage/types": "^1.1.1"
   },
   "files": [
-    "dist",
-    "src"
-  ],
-  "dependencies": {
-    "@backstage/catalog-model": "^1.4.3",
-    "@backstage/plugin-permission-common": "^0.7.12",
-    "@backstage/plugin-catalog-node": "^1.6.1",
-    "@backstage/backend-plugin-api": "^0.6.9",
-    "@backstage/types": "^1.1.1"
-  }
+    "dist"
+  ]
 }

@@ -1,5 +1,9 @@
 # @paulpogo/plugin-iac-support-common
 
-Welcome to the common package for the iac-support plugin!
+This Package supplies the `"common"` components for the IaC Support Backstage plugin.
 
-_This plugin was created through the Backstage CLI_
+To build it use the `yarn --tsc` command
+
+To create the package use the `yarn tsc` command
+
+To push the package to the NPM repo use `npm publish --access public` 

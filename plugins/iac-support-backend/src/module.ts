@@ -1,6 +1,6 @@
 import { createBackendModule } from '@backstage/backend-plugin-api';
 import { catalogProcessingExtensionPoint } from '@backstage/plugin-catalog-node/alpha';
-import { IacSupportEntitiesProcessor } from './IacSupportEntitiesProcessor';
+import { IacSupportEntitiesProcessor } from './processor';
 
 /**
  * Registers support for the Iac Support specific entity model (e.g. the Template
@@ -10,7 +10,7 @@ import { IacSupportEntitiesProcessor } from './IacSupportEntitiesProcessor';
  */
 export const catalogModuleIacSupportEntityModel = createBackendModule({
   pluginId: 'catalog',
-  moduleId: 'iac_support-backend',
+  moduleId: 'iac-support-backend-model',
   register(env) {
     env.registerInit({
       deps: {

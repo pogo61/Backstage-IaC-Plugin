@@ -1,8 +1,9 @@
 import {
   Entity,
+  entityKindSchemaValidator,
   KindValidator,
 } from '@backstage/catalog-model';
-import { ajvCompiledJsonSchemaValidator } from './util';
+// import { ajvCompiledJsonSchemaValidator } from './util';
 import schema from './Schema/Environment.v1alpha1.schema.json';
 
 
@@ -22,10 +23,17 @@ export interface EnvironmentEntity extends Entity {
   };
 }
 
+const validator = entityKindSchemaValidator(schema);
 /**
  * {@link KindValidator} for {@link EnvironmentEntity}.
  *
  * @public
  */
-export const environmentEntityValidator =
-  ajvCompiledJsonSchemaValidator(schema);
+// export const environmentEntityValidator =
+//   ajvCompiledJsonSchemaValidator(schema);
+
+export const environmentEntityValidator: KindValidator = {
+  async check(data: Entity) {
+    return validator(data) === data;
+  },
+};

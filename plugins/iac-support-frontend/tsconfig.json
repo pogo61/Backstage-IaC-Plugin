@@ -1,23 +1,21 @@
 {
-  "include": ["src","types"],
+  "extends": "../../tsconfig.json",
+  "include": [
+    "./*"
+  ],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["dist/*"]
-    },
     "target": "ES2019",
      "outDir": "dist",
-     "rootDir": "src",
+     "rootDir": ".",
      "allowJs": true,
      "jsx": "react-jsx",
      "skipLibCheck": true,
      "useUnknownInCatchVariables": false,
      "esModuleInterop": true,
      "types": [
-       "node"
+       "node",
+       "@types/webpack-env"
      ]
   }
 }
