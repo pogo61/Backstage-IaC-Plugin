@@ -8,3 +8,7 @@
 /plugins/iac-support-common/yarn.lock
 /plugins/iac-support-backend/yarn.lock
 yarn.lock
+/plugins/iac-support-frontend/.yarn/
+/plugins/iac-support-frontend/node_modules/
+/plugins/iac-support-frontend/dist/
+/plugins/iac-support-frontend/.yarnrc.yml
