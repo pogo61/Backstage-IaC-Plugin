@@ -13,4 +13,3 @@ yarn.lock
 /plugins/iac-support-frontend/dist/
 /plugins/iac-support-frontend/.yarnrc.yml
 /plugins/iac-support-common/.yarn/
-/plugins/iac-support-common/.yarn/
