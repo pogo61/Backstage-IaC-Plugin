@@ -12,7 +12,7 @@ yarn.lock
 /plugins/iac-support-frontend/node_modules/
 /plugins/iac-support-frontend/dist/
 /plugins/iac-support-frontend/.yarnrc.yml
-/plugins/iac-support-common/.yarn/
+/plugins/iac-support-common/.yarn/ -f
 /plugins/iac-support-common/.yarnrc.yml
 /plugins/iac-support-common/.yarn/cache/
 /plugins/iac-support-common/.yan/install-state.gz
