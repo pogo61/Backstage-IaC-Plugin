@@ -1,5 +1,6 @@
 {
-  "include": ["src","types"],
+  "extends": "../../tsconfig.json",
+  "include": ["src"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "moduleResolution": "node",
@@ -13,7 +14,6 @@
      "rootDir": "src",
      "allowJs": true,
      "jsx": "react-jsx",
-     "skipLibCheck": true,
      "useUnknownInCatchVariables": false,
      "esModuleInterop": true,
      "types": [

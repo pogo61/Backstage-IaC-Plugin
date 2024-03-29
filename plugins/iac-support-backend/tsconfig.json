@@ -1,13 +1,11 @@
 { "extends": "../../tsconfig.json",
-  "include": [
-    "./src"
-  ],
+  "include": ["src"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "moduleResolution": "node",
     "target": "ES2019",
      "outDir": "dist",
-     "rootDir": ".",
+     "rootDir": "src",
      "allowJs": true,
      "jsx": "react-jsx",
      "skipLibCheck": true,

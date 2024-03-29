@@ -4,16 +4,16 @@
   "engines": {
     "node": "18 || 20"
   },
-  "version": "0.1.23",
+  "version": "0.1.25",
   "license": "MIT",
   "packageManager": "yarn@1.22.22",
-  "main": "./dist/src/index.js",
+  "main": "./dist/index.js",
   "publishConfig": {
     "access": "public"
   },
   "exports": {
     "./package.json": "./package.json",
-    ".": "./dist/src/index.js"
+    ".": "./dist/index.js"
   },
   "typesVersions": {
     "*": {
@@ -35,7 +35,7 @@
     "@backstage/plugin-scaffolder-common": "^1.5.1",
     "@backstage/plugin-scaffolder-node": "^0.4.1",
     "@backstage/types": "^1.1.1",
-    "@paulpogo/plugin-iac-support-common": "^0.1.60"
+    "@paulpogo/plugin-iac-support-common": "^0.1.61"
   },
   "files": [
     "dist"
