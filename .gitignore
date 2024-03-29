@@ -14,3 +14,5 @@ yarn.lock
 /plugins/iac-support-frontend/.yarnrc.yml
 /plugins/iac-support-common/.yarn/
 /plugins/iac-support-common/.yarnrc.yml
+/plugins/iac-support-common/.yarn/cache/
+/plugins/iac-support-common/.yan/install-state.gz
