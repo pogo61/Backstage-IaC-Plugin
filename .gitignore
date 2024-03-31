@@ -1,12 +1,12 @@
 .idea/
 /node_modules/.yarn-integrity
 /node_modules/
-/plugins/iac-support-backend/dist/
+/plugins/catalog-backend-module-iac-support/dist/
 /plugins/iac-support-common/dist/
 /plugins/iac-support-common/node_modules/
-/plugins/iac-support-backend/node_modules/
+/plugins/catalog-backend-module-iac-support/node_modules/
 /plugins/iac-support-common/yarn.lock
-/plugins/iac-support-backend/yarn.lock
+/plugins/catalog-backend-module-iac-support/yarn.lock
 yarn.lock
 /plugins/iac-support-frontend/.yarn/
 /plugins/iac-support-frontend/node_modules/

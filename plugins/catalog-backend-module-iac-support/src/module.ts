@@ -10,7 +10,7 @@ import { IacSupportEntitiesProcessor } from './processor';
  */
 export const catalogModuleIacSupportEntityModel = createBackendModule({
   pluginId: 'catalog',
-  moduleId: 'iac-support-backend-model',
+  moduleId: 'catalog-backend-module-iac-support-model',
   register(env) {
     env.registerInit({
       deps: {
