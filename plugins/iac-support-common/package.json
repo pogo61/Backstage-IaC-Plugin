@@ -4,17 +4,17 @@
   "engines": {
     "node": "18 || 20"
   },
-  "version": "0.0.2",
+  "version": "0.0.13",
   "license": "MIT",
   "packageManager": "yarn@1.22.22",
-  "main": "./dist/index.js",
-  "types": "index.d.ts",
+  "main": "./dist/src/index.ts",
+  "types": "./dist/src/index.ts",
   "publishConfig": {
     "access": "public"
   },
   "exports": {
     "./package.json": "./package.json",
-    ".": "./dist/index.js"
+    ".": "./dist/src/index.js"
   },
   "typesVersions": {
     "*": {
@@ -36,7 +36,6 @@
     "@backstage/types": "^1.1.1"
   },
   "files": [
-    "dist",
-    "package.json"
+    "dist"
   ]
 }

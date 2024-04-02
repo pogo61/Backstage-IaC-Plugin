@@ -16,3 +16,11 @@ yarn.lock
 /plugins/iac-support-common/.yarnrc.yml
 /plugins/iac-support-common/.yarn/install-state.gz
 /plugins/iac-support-common/.yarn/cache/
+/dist/plugins/iac-support-common/src/EnvironmentEntity.d.ts
+/dist/plugins/iac-support-common/src/index.d.ts
+/dist/plugins/iac-support-common/src/ResourceComponentEntity.d.ts
+/dist/plugins/iac-support-common/tsconfig.tsbuildinfo
+/plugins/catalog-backend-module-iac-support/tsconfig copy.json
+/plugins/iac-support-common/tsconfig copy.json
+/dist/plugins/iac-support-common/src/util.d.ts
+tsconfig.old

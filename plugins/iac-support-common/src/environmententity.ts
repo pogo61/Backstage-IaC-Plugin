@@ -13,7 +13,7 @@ import schema from './Schema/Environment.v1alpha1.schema.json';
  *
  * @public
  */
-export interface EnvironmentEntity extends Entity {
+export interface environmentEntity extends Entity {
   apiVersion: 'backstage.io/v1alpha1';
   kind: 'Environment';
   spec: {
@@ -25,7 +25,7 @@ export interface EnvironmentEntity extends Entity {
 
 const validator = entityKindSchemaValidator(schema);
 /**
- * {@link KindValidator} for {@link EnvironmentEntity}.
+ * {@link KindValidator} for {@link environmentEntity}.
  *
  * @public
  */

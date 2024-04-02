@@ -1,18 +1,9 @@
-{ "extends": "../../tsconfig.json",
-  "include": ["src"],
+{
+  "extends": "../../tsconfig.json",
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "moduleResolution": "node",
-    "target": "ES2019",
-     "outDir": "dist",
-     "rootDir": "src",
-     "allowJs": true,
-     "jsx": "react-jsx",
-     "skipLibCheck": true,
-     "useUnknownInCatchVariables": false,
-     "esModuleInterop": true,
-     "types": [
-       "node"
-     ]
+    "outDir": "./dist",
+    "rootDir": "."
   }
 }
