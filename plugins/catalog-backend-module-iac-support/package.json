@@ -1,23 +1,21 @@
 {
-  "name": "@paulpogo/backstage-plugin-catalog-backend-module-iac-support",
+  "name": "@paulpogo/plugin-catalog-backend-module-iac-support",
   "description": "adds support for the spec.parent attribute on the ResourceComponent entity, so that nested ResourceComponents are shown like that in the Catalog Graph.",
   "engines": {
     "node": "18 || 20"
   },
-  "version": "0.0.13",
+  "version": "0.0.0",
   "license": "MIT",
-  "packageManager": "yarn@1.22.22",
-  "main": "./dist/src/index.js",
+  "main": "dist/index.cjs.js",
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
-  "exports": {
-    "./package.json": "./package.json",
-    ".": "./dist/src/index.js"
-  },
   "typesVersions": {
     "*": {
-      "package.json": ["package.json"]
+      "package.json": [
+        "package.json"
+      ]
     }
   },
   "backstage": {
@@ -25,17 +23,19 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "tsc"
+    "build": "backstage-cli package build",
+    "lint": "backstage-cli package lint"
   },
   "dependencies": {
     "@backstage/backend-plugin-api": "^0.6.15",
     "@backstage/catalog-model": "^1.4.5",
+    "@backstage/cli": "^0.26.2",
     "@backstage/plugin-catalog-common": "^1.0.22",
     "@backstage/plugin-catalog-node": "^1.10.0",
     "@backstage/plugin-scaffolder-common": "^1.5.1",
     "@backstage/plugin-scaffolder-node": "^0.4.1",
     "@backstage/types": "^1.1.1",
-    "@paulpogo/backstage-plugin-iac-support-common": "^0.0.13"
+    "@paulpogo/plugin-iac-support-common": "^0.0.1"
   },
   "files": [
     "dist"

@@ -24,3 +24,16 @@ yarn.lock
 /plugins/iac-support-common/tsconfig copy.json
 /dist/plugins/iac-support-common/src/util.d.ts
 tsconfig.old
+/plugins/catalog-backend-module-iac-support/.yarnrc.yml
+/plugins/iac-support-common/dist-types/src/environmententity.d.ts
+/plugins/catalog-backend-module-iac-support/dist-types/src/processor/IacSupportEntitiesProcessor.d.ts
+/plugins/catalog-backend-module-iac-support/dist-types/src/modules/index.d.ts
+/plugins/catalog-backend-module-iac-support/dist-types/src/processor/index.d.ts
+/plugins/catalog-backend-module-iac-support/dist-types/src/index.d.ts
+/plugins/iac-support-common/dist-types/src/index.d.ts
+/plugins/catalog-backend-module-iac-support/.yarn/install-state.gz
+/plugins/catalog-backend-module-iac-support/dist-types/src/modules/module.d.ts
+/plugins/iac-support-common/dist-types/src/resourcecomponententity.d.ts
+/plugins/catalog-backend-module-iac-support/dist-types/tsconfig.tsbuildinfo
+/plugins/iac-support-common/dist-types/tsconfig.tsbuildinfo
+/plugins/catalog-backend-module-iac-support/.yarn/releases/yarn-classic.cjs

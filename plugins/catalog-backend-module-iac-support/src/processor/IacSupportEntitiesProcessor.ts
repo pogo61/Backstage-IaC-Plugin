@@ -17,8 +17,8 @@ import {
   processingResult,
 } from '@backstage/plugin-catalog-node';
 import { LocationSpec } from '@backstage/plugin-catalog-common';
-import { environmentEntityValidator, resourceComponentEntityValidator } from '@paulpogo/backstage-plugin-iac-support-common';
-import { environmentEntity, resourceComponentEntity } from '@paulpogo/backstage-plugin-iac-support-common';
+import { environmentEntityValidator, resourceComponentEntityValidator } from '@paulpogo/plugin-iac-support-common';
+import { environmentEntity, resourceComponentEntity } from '@paulpogo/plugin-iac-support-common';
 
 /**
  * Adds support for Iac Support specific entity kinds to the catalog.
