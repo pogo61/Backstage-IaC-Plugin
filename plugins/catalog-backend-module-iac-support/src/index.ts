@@ -5,5 +5,5 @@
  */
 
 export * from './processor';
-export type { catalogModuleIacSupportEntityModel as default } from "./modules";
+export { catalogModuleIacSupportEntityModel as default } from "./modules";
 

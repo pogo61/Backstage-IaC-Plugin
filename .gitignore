@@ -37,3 +37,11 @@ tsconfig.old
 /plugins/catalog-backend-module-iac-support/dist-types/tsconfig.tsbuildinfo
 /plugins/iac-support-common/dist-types/tsconfig.tsbuildinfo
 /plugins/catalog-backend-module-iac-support/.yarn/releases/yarn-classic.cjs
+/plugins/iac-support-frontend/dist-types/src/components/HasSubcomponentsCard/HasSubcomponentsCard.d.ts
+/plugins/iac-support-frontend/dist-types/src/components/HasSubcomponentsCard/index.d.ts
+/plugins/iac-support-frontend/dist-types/src/index.d.ts
+/plugins/iac-support-frontend/dist-types/src/plugin.d.ts
+/plugins/iac-support-frontend/dist-types/src/components/HasSubcomponentsCard/presets.d.ts
+/plugins/iac-support-frontend/dist-types/routes.d.ts
+/plugins/iac-support-frontend/dist-types/tsconfig.tsbuildinfo
+/plugins/iac-support-frontend/tsconfig copy.json
