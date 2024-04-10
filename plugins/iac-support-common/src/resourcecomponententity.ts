@@ -1,9 +1,10 @@
 import {
   Entity,
+  entityKindSchemaValidator,
   KindValidator,
 } from '@backstage/catalog-model';
 import schema from './Schema/ResourceComponent.v1alpha1.schema.json';
-import { ajvCompiledJsonSchemaValidator } from './util';
+// import { ajvCompiledJsonSchemaValidator } from './util';
 
 /**
  * Backstage catalog Component kind Entity. Represents a single, individual piece of software.
@@ -14,7 +15,7 @@ import { ajvCompiledJsonSchemaValidator } from './util';
  *
  * @public
  */
-export interface ResourceComponentEntity extends Entity {
+export interface resourceComponentEntity extends Entity {
   apiVersion: 'backstage.io/v1alpha1' | 'backstage.io/v1beta1';
   kind: 'ResourceComponent';
   spec: {
@@ -30,9 +31,17 @@ export interface ResourceComponentEntity extends Entity {
 }
 
 /**
- * {@link KindValidator} for {@link ResourceComponentEntity}.
+ * {@link KindValidator} for {@link resourceComponentEntity}.
  *
  * @public
  */
-export const resourceComponentEntityValidator =
-  ajvCompiledJsonSchemaValidator(schema);
+// export const resourceComponentEntityValidator =
+//   ajvCompiledJsonSchemaValidator(schema);
+
+const validator = entityKindSchemaValidator(schema);
+
+export const resourceComponentEntityValidator: KindValidator = {
+  async check(data: Entity) {
+    return validator(data) === data;
+  },
+};

@@ -1,6 +1,6 @@
-# @paulpogo/plugin-iac-support-common
+# @paulpogo/plugin-iac-support-backend
 
-This Package supplies the `"common"` components for the IaC Support Backstage plugin.
+This Package supplies the `"backend"` components for the IaC Support Backstage plugin.
 
 To build it use the `yarn --tsc` command
 

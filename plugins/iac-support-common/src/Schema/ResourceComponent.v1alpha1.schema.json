@@ -59,6 +59,11 @@
               "examples": ["platform-team", "user:john.johnson"],
               "minLength": 1
             },
+            "subcomponentOf": {
+              "type": "string",
+              "description": "the name of the Component that uses this Component",
+              "minLength": 1
+            },
             "environment": {
               "type": "array",
               "description": "An array of entity references to the environment(s) that the resource component belongs to.",

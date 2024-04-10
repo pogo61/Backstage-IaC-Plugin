@@ -17,12 +17,8 @@ import {
   processingResult,
 } from '@backstage/plugin-catalog-node';
 import { LocationSpec } from '@backstage/plugin-catalog-common';
-
-import {
-  EnvironmentEntity,
-  environmentEntityValidator, ResourceComponentEntity,
-  resourceComponentEntityValidator,
-} from '@paulpogo/plugin-iac-support-common';
+import { environmentEntityValidator, resourceComponentEntityValidator } from '@paulpogo/plugin-iac-support-common';
+import { environmentEntity, resourceComponentEntity } from '@paulpogo/plugin-iac-support-common';
 
 /**
  * Adds support for Iac Support specific entity kinds to the catalog.
@@ -107,7 +103,7 @@ export class IacSupportEntitiesProcessor implements CatalogProcessor {
       /*
        * Emit relations for the Environment kind
        */
-      const environment = entity as EnvironmentEntity;
+      const environment = entity as environmentEntity;
       doEmit(
         environment.spec.owner,
         { defaultKind: 'Group', defaultNamespace: selfRef.namespace },
@@ -136,7 +132,7 @@ export class IacSupportEntitiesProcessor implements CatalogProcessor {
       /*
        * Emit relations for the Resource Component kind
        */
-      const resourcecomponent = entity as ResourceComponentEntity;
+      const resourcecomponent = entity as resourceComponentEntity;
       doEmit(
         resourcecomponent.spec.owner,
         { defaultKind: 'Group', defaultNamespace: selfRef.namespace },
