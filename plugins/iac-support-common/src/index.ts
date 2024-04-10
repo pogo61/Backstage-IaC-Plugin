@@ -1,5 +1,5 @@
 /**
- * Common functionalities for the iac-support, to be shared between iac-support and catalog-backend-module-iac-support plugin
+ * Common functionalities for the iac-support, to be shared between iac-support and iac-support-backend plugin
  */
 
 // @ts-ignore

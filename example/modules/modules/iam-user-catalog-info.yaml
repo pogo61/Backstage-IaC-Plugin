@@ -1,0 +1,93 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: ResourceComponent
+metadata:
+  description: iam-user terraform module
+  name: iam-user
+spec:
+  dependsOn:
+  - resource:aws_iam_user-this
+  - resource:aws_iam_user_login_profile-this
+  - resource:aws_iam_access_key-this
+  - resource:aws_iam_access_key-this_no_pgp
+  - resource:aws_iam_user_ssh_key-this
+  - resource:aws_iam_user_policy_attachment-this
+  environment:
+  - test
+  lifecycle: experimental
+  owner: platform_team
+  parent:
+  - iam
+  providesVariables:
+  - create_user
+  - create_iam_user_login_profile
+  - create_iam_access_key
+  - name
+  - path
+  - force_destroy
+  - pgp_key
+  - iam_access_key_status
+  - password_reset_required
+  - password_length
+  - upload_iam_user_ssh_key
+  - ssh_key_encoding
+  - ssh_public_key
+  - permissions_boundary
+  - policy_arns
+  - tags
+  subcomponentOf: iam
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_user with name this
+  name: aws_iam_user-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_user_login_profile with name this
+  name: aws_iam_user_login_profile-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_access_key with name this
+  name: aws_iam_access_key-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_access_key with name this_no_pgp
+  name: aws_iam_access_key-this_no_pgp
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_user_ssh_key with name this
+  name: aws_iam_user_ssh_key-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_user_policy_attachment with name this
+  name: aws_iam_user_policy_attachment-this
+spec:
+  owner: platform_team
+  type: terraform

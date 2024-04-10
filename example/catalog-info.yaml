@@ -1,0 +1,38 @@
+apiVersion: backstage.io/v1alpha1
+kind: Environment
+metadata:
+  description: test environment
+  name: test
+spec:
+  domain: infrastructure
+  owner: platform_team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  description: The team responsible for environment test
+  name: platform_team
+spec:
+  children:
+  - backstage
+  parent: other
+  profile:
+    displayName: platform_team
+  type: business-unit
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  description: Everything about Infrastructure
+  name: infrastructure
+spec:
+  owner: backstage
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_ssm_parameter with name validated_image
+  name: aws_ssm_parameter-validated_image
+spec:
+  owner: platform_team
+  type: terraform

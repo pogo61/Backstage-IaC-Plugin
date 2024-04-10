@@ -1,0 +1,55 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: ResourceComponent
+metadata:
+  description: iam-assumable-role-with-oidc terraform module
+  name: iam-assumable-role-with-oidc
+spec:
+  dependsOn:
+  - resource:aws_iam_role-this
+  - resource:aws_iam_role_policy_attachment-custom
+  environment:
+  - test
+  lifecycle: experimental
+  owner: platform_team
+  parent:
+  - iam
+  providesVariables:
+  - create_role
+  - provider_url
+  - provider_urls
+  - aws_account_id
+  - tags
+  - role_name
+  - role_name_prefix
+  - role_description
+  - role_path
+  - role_permissions_boundary_arn
+  - max_session_duration
+  - role_policy_arns
+  - number_of_role_policy_arns
+  - oidc_fully_qualified_subjects
+  - oidc_subjects_with_wildcards
+  - oidc_fully_qualified_audiences
+  - force_detach_policies
+  - allow_self_assume_role
+  subcomponentOf: resourcecomponent:iam
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_role with name this
+  name: aws_iam_role-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_role_policy_attachment with name custom
+  name: aws_iam_role_policy_attachment-custom
+spec:
+  owner: platform_team
+  type: terraform

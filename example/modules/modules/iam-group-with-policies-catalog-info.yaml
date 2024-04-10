@@ -1,0 +1,98 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: ResourceComponent
+metadata:
+  description: iam-group-with-policies terraform module
+  name: iam-group-with-policies
+spec:
+  dependsOn:
+  - resource:aws_iam_group-this
+  - resource:aws_iam_group_membership-this
+  - resource:aws_iam_group_policy_attachment-iam_self_management
+  - resource:aws_iam_group_policy_attachment-custom_arns
+  - resource:aws_iam_group_policy_attachment-custom
+  - resource:aws_iam_policy-iam_self_management
+  - resource:aws_iam_policy-custom
+  environment:
+  - test
+  lifecycle: experimental
+  owner: platform_team
+  parent:
+  - iam
+  providesVariables:
+  - create_group
+  - name
+  - path
+  - group_users
+  - custom_group_policy_arns
+  - custom_group_policies
+  - enable_mfa_enforcement
+  - attach_iam_self_management_policy
+  - iam_self_management_policy_name_prefix
+  - aws_account_id
+  - tags
+  subcomponentOf: iam
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_group with name this
+  name: aws_iam_group-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_group_membership with name this
+  name: aws_iam_group_membership-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_group_policy_attachment with name iam_self_management
+  name: aws_iam_group_policy_attachment-iam_self_management
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_group_policy_attachment with name custom_arns
+  name: aws_iam_group_policy_attachment-custom_arns
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_group_policy_attachment with name custom
+  name: aws_iam_group_policy_attachment-custom
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_policy with name iam_self_management
+  name: aws_iam_policy-iam_self_management
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_policy with name custom
+  name: aws_iam_policy-custom
+spec:
+  owner: platform_team
+  type: terraform
