@@ -1,0 +1,29 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: ResourceComponent
+metadata:
+  description: iam terraform module
+  name: iam
+spec:
+  dependsOn:
+  - resourcecomponent:iam-assumable-roles-with-saml
+  - resourcecomponent:iam-assumable-roles
+  - resourcecomponent:iam-group-with-assumable-roles-policy
+  - resourcecomponent:iam-assumable-role-with-oidc
+  - resourcecomponent:iam-policy
+  - resourcecomponent:iam-role-for-service-accounts-eks
+  - resourcecomponent:iam-group-with-policies
+  - resourcecomponent:iam-read-only-policy
+  - resourcecomponent:iam-eks-role
+  - resourcecomponent:iam-github-oidc-provider
+  - resourcecomponent:iam-github-oidc-role
+  - resourcecomponent:iam-assumable-role-with-saml
+  - resourcecomponent:iam-assumable-role
+  - resourcecomponent:iam-account
+  - resourcecomponent:iam-user
+  environment:
+  - test
+  lifecycle: experimental
+  owner: platform_team
+  providesVariables: []
+  type: terraform

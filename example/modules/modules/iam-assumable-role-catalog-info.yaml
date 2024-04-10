@@ -1,0 +1,106 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: ResourceComponent
+metadata:
+  description: iam-assumable-role terraform module
+  name: iam-assumable-role
+spec:
+  dependsOn:
+  - resource:aws_iam_role-this
+  - resource:aws_iam_role_policy_attachment-custom
+  - resource:aws_iam_role_policy_attachment-admin
+  - resource:aws_iam_role_policy_attachment-poweruser
+  - resource:aws_iam_role_policy_attachment-readonly
+  - resource:aws_iam_instance_profile-this
+  environment:
+  - test
+  lifecycle: experimental
+  owner: platform_team
+  parent:
+  - iam
+  providesVariables:
+  - trusted_role_actions
+  - trusted_role_arns
+  - trusted_role_services
+  - mfa_age
+  - max_session_duration
+  - create_role
+  - create_instance_profile
+  - role_name
+  - role_name_prefix
+  - role_path
+  - role_requires_mfa
+  - role_permissions_boundary_arn
+  - tags
+  - custom_role_policy_arns
+  - custom_role_trust_policy
+  - create_custom_role_trust_policy
+  - number_of_custom_role_policy_arns
+  - admin_role_policy_arn
+  - poweruser_role_policy_arn
+  - readonly_role_policy_arn
+  - attach_admin_policy
+  - attach_poweruser_policy
+  - attach_readonly_policy
+  - force_detach_policies
+  - role_description
+  - role_sts_externalid
+  - allow_self_assume_role
+  - role_requires_session_name
+  - role_session_name
+  subcomponentOf: resourcecomponent:iam
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_role with name this
+  name: aws_iam_role-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_role_policy_attachment with name custom
+  name: aws_iam_role_policy_attachment-custom
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_role_policy_attachment with name admin
+  name: aws_iam_role_policy_attachment-admin
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_role_policy_attachment with name poweruser
+  name: aws_iam_role_policy_attachment-poweruser
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_role_policy_attachment with name readonly
+  name: aws_iam_role_policy_attachment-readonly
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_instance_profile with name this
+  name: aws_iam_instance_profile-this
+spec:
+  owner: platform_team
+  type: terraform

@@ -1,0 +1,34 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: ResourceComponent
+metadata:
+  description: iam-policy terraform module
+  name: iam-policy
+spec:
+  dependsOn:
+  - resource:aws_iam_policy-policy
+  environment:
+  - test
+  lifecycle: experimental
+  owner: platform_team
+  parent:
+  - iam
+  providesVariables:
+  - create_policy
+  - name
+  - name_prefix
+  - path
+  - description
+  - policy
+  - tags
+  subcomponentOf: iam
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_policy with name policy
+  name: aws_iam_policy-policy
+spec:
+  owner: platform_team
+  type: terraform

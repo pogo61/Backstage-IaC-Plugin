@@ -1,0 +1,189 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: ResourceComponent
+metadata:
+  description: alb terraform module
+  name: alb
+spec:
+  dependsOn:
+  - resourcecomponent:lb_trust_store
+  - resource:aws_lb-this
+  - resource:aws_lb_listener-this
+  - resource:aws_lb_listener_rule-this
+  - resource:aws_lb_listener_certificate-this
+  - resource:aws_lb_target_group-this
+  - resource:aws_lb_target_group_attachment-this
+  - resource:aws_lb_target_group_attachment-additional
+  - resource:aws_lambda_permission-this
+  - resource:aws_security_group-this
+  - resource:aws_vpc_security_group_egress_rule-this
+  - resource:aws_vpc_security_group_ingress_rule-this
+  - resource:aws_route53_record-this
+  - resource:aws_wafv2_web_acl_association-this
+  environment:
+  - test
+  lifecycle: experimental
+  owner: platform_team
+  providesVariables:
+  - create
+  - tags
+  - access_logs
+  - connection_logs
+  - customer_owned_ipv4_pool
+  - desync_mitigation_mode
+  - dns_record_client_routing_policy
+  - drop_invalid_header_fields
+  - enable_cross_zone_load_balancing
+  - enable_deletion_protection
+  - enable_http2
+  - enable_tls_version_and_cipher_suite_headers
+  - enable_waf_fail_open
+  - enable_xff_client_port
+  - idle_timeout
+  - internal
+  - ip_address_type
+  - load_balancer_type
+  - enforce_security_group_inbound_rules_on_private_link_traffic
+  - name
+  - name_prefix
+  - preserve_host_header
+  - security_groups
+  - subnet_mapping
+  - subnets
+  - xff_header_processing_mode
+  - timeouts
+  - default_port
+  - default_protocol
+  - listeners
+  - target_groups
+  - additional_target_group_attachments
+  - create_security_group
+  - security_group_name
+  - security_group_use_name_prefix
+  - security_group_description
+  - vpc_id
+  - security_group_ingress_rules
+  - security_group_egress_rules
+  - security_group_tags
+  - route53_records
+  - associate_web_acl
+  - web_acl_arn
+  - putin_khuylo
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_lb with name this
+  name: aws_lb-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_lb_listener with name this
+  name: aws_lb_listener-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_lb_listener_rule with name this
+  name: aws_lb_listener_rule-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_lb_listener_certificate with name this
+  name: aws_lb_listener_certificate-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_lb_target_group with name this
+  name: aws_lb_target_group-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_lb_target_group_attachment with name this
+  name: aws_lb_target_group_attachment-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_lb_target_group_attachment with name additional
+  name: aws_lb_target_group_attachment-additional
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_lambda_permission with name this
+  name: aws_lambda_permission-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_security_group with name this
+  name: aws_security_group-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_vpc_security_group_egress_rule with name this
+  name: aws_vpc_security_group_egress_rule-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_vpc_security_group_ingress_rule with name this
+  name: aws_vpc_security_group_ingress_rule-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_route53_record with name this
+  name: aws_route53_record-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_wafv2_web_acl_association with name this
+  name: aws_wafv2_web_acl_association-this
+spec:
+  owner: platform_team
+  type: terraform

@@ -1,0 +1,46 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: ResourceComponent
+metadata:
+  description: lb_trust_store terraform module
+  name: lb_trust_store
+spec:
+  dependsOn:
+  - resource:aws_lb_trust_store-this
+  - resource:aws_lb_trust_store_revocation-this
+  environment:
+  - test
+  lifecycle: experimental
+  owner: platform_team
+  parent:
+  - alb
+  providesVariables:
+  - create
+  - ca_certificates_bundle_s3_bucket
+  - ca_certificates_bundle_s3_key
+  - ca_certificates_bundle_s3_object_version
+  - name
+  - name_prefix
+  - create_trust_store_revocation
+  - revocation_lists
+  - tags
+  subcomponentOf: resourcecomponent:alb
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_lb_trust_store with name this
+  name: aws_lb_trust_store-this
+spec:
+  owner: platform_team
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_lb_trust_store_revocation with name this
+  name: aws_lb_trust_store_revocation-this
+spec:
+  owner: platform_team
+  type: terraform

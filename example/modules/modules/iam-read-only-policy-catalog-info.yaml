@@ -1,0 +1,39 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: ResourceComponent
+metadata:
+  description: iam-read-only-policy terraform module
+  name: iam-read-only-policy
+spec:
+  dependsOn:
+  - resource:aws_iam_policy-policy
+  environment:
+  - test
+  lifecycle: experimental
+  owner: platform_team
+  parent:
+  - iam
+  providesVariables:
+  - create_policy
+  - name
+  - name_prefix
+  - path
+  - description
+  - allowed_services
+  - additional_policy_json
+  - tags
+  - allow_cloudwatch_logs_query
+  - allow_predefined_sts_actions
+  - allow_web_console_services
+  - web_console_services
+  subcomponentOf: iam
+  type: terraform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  description: resource aws_iam_policy with name policy
+  name: aws_iam_policy-policy
+spec:
+  owner: platform_team
+  type: terraform
