@@ -45,3 +45,4 @@ tsconfig.old
 /plugins/iac-support-frontend/dist-types/routes.d.ts
 /plugins/iac-support-frontend/dist-types/tsconfig.tsbuildinfo
 /plugins/iac-support-frontend/tsconfig copy.json
+/plugins/iac-support-frontend/dist-types/plugin.d.ts
