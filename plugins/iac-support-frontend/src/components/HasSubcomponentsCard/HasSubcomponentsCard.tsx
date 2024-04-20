@@ -18,7 +18,7 @@
 import {InfoCardVariants, TableOptions} from '@backstage/core-components';
 import React from 'react';
 import {RelatedEntitiesCard} from '@backstage/plugin-catalog';
-import {asResComponentEntities, resComponentEntityColumns} from './presets';
+import {asResComponentEntities, resComponentEntityColumns, resComponentEntityHelpLink} from './presets';
 
 /** @public */
 export interface HasSubcomponentsCardProps {
@@ -44,7 +44,7 @@ export function HasSubcomponentsCard(props: HasSubcomponentsCardProps) {
           columns={resComponentEntityColumns}
           asRenderableEntities={asResComponentEntities}
           emptyMessage=""
-          emptyHelpLink=""
+          emptyHelpLink={resComponentEntityHelpLink}
           tableOptions={tableOptions}
       />
   );

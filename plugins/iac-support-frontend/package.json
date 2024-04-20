@@ -4,10 +4,10 @@
   "engines": {
     "node": "18 || 20"
   },
-  "version": "0.0.81",
+  "version": "0.0.84",
   "license": "MIT",
-  "main": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },

@@ -26,7 +26,7 @@ spec:
   - allow_predefined_sts_actions
   - allow_web_console_services
   - web_console_services
-  subcomponentOf: iam
+  subcomponentOf: resourcecomponent:iam
   type: terraform
 ---
 apiVersion: backstage.io/v1alpha1

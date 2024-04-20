@@ -145,6 +145,12 @@ export class IacSupportEntitiesProcessor implements CatalogProcessor {
         RELATION_DEPENDS_ON,
         RELATION_DEPENDENCY_OF,
       );
+      doEmit(
+        resourcecomponent.spec.subcomponentOf,
+        { defaultNamespace: selfRef.namespace },
+        RELATION_PART_OF,
+        RELATION_HAS_PART,
+      );
       if (!('parent' in resourcecomponent.spec)) {
         doEmit(
             resourcecomponent.spec.environment,

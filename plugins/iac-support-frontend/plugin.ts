@@ -14,12 +14,8 @@
  * limitations under the License.
  */
 
-import { CatalogClient } from '@backstage/catalog-client';
 import {
-  catalogApiRef,
-  entityPresentationApiRef,
   entityRouteRef,
-  starredEntitiesApiRef,
 } from '@backstage/plugin-catalog-react';
 import {
   createComponentRouteRef,
@@ -28,44 +24,15 @@ import {
   viewTechDocRouteRef,
 } from './routes';
 import {
-  createApiFactory,
   createComponentExtension,
   createPlugin,
-  discoveryApiRef,
-  fetchApiRef,
-  storageApiRef,
 } from '@backstage/core-plugin-api';
-import { DefaultStarredEntitiesApi } from '@backstage/plugin-catalog';
 import { HasSubcomponentsCardProps } from './src';
 import { rootRouteRef } from './routes';
-import { DefaultEntityPresentationApi } from '@backstage/plugin-catalog';
 
 /** @public */
 export const iacPlugin = createPlugin({
   id: 'iac-support-frontend',
-  apis: [
-    createApiFactory({
-      api: catalogApiRef,
-      deps: {
-        discoveryApi: discoveryApiRef,
-        fetchApi: fetchApiRef,
-      },
-      factory: ({ discoveryApi, fetchApi }) =>
-        new CatalogClient({ discoveryApi, fetchApi }),
-    }),
-    createApiFactory({
-      api: starredEntitiesApiRef,
-      deps: { storageApi: storageApiRef },
-      factory: ({ storageApi }) =>
-        new DefaultStarredEntitiesApi({ storageApi }),
-    }),
-    createApiFactory({
-      api: entityPresentationApiRef,
-      deps: { catalogApi: catalogApiRef },
-      factory: ({ catalogApi }) =>
-        DefaultEntityPresentationApi.create({ catalogApi }),
-    }),
-  ],
   routes: {
     catalogIndex: rootRouteRef,
     catalogEntity: entityRouteRef,

@@ -21,7 +21,7 @@ import { EntityTable } from '@backstage/plugin-catalog-react';
 import { TableColumn } from '@backstage/core-components';
 
 export const resComponentEntityColumns: TableColumn<ComponentEntity>[] = [
-  EntityTable.columns.createEntityRefColumn({ defaultKind: 'resourceComponent' }),
+  EntityTable.columns.createEntityRefColumn({ defaultKind: 'ResourceComponent' }),
   EntityTable.columns.createOwnerColumn(),
   EntityTable.columns.createSpecTypeColumn(),
   EntityTable.columns.createSpecLifecycleColumn(),

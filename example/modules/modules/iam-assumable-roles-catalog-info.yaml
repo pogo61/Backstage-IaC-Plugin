@@ -47,7 +47,7 @@ spec:
   - readonly_role_tags
   - max_session_duration
   - force_detach_policies
-  subcomponentOf: iam
+  subcomponentOf: resourcecomponent:iam
   type: terraform
 ---
 apiVersion: backstage.io/v1alpha1
