@@ -15,14 +15,17 @@ You must have a Backstage app running. If not you can create one with `npx @back
 
 * iac-support-common - contains the definition of the Environment and ResourceComponent entities, extremely simplified. This was built by looking at the https://github.com/backstage/backstage/tree/master/packages/catalog-model/src/kinds and https://github.com/backstage/backstage/tree/master/packages/catalog-model/src/schema code for the existing entities
 * iac-support-backend - contains the validation logic used by Backstage to ensure our entities work correctly, and generate teh right relation lines. Again, I use the processors in these folders to help, but the best pointer I got was from the Backstage Discord support bods and the creation of the doEmit function.
+* iac-support-frontend - front-end plugin to display the sub-ResourceComponents in the "Has Subcomponent" table
            
 ### Release 2 and beyond has been refactored to support the new Backend Architecture Introduced in version 1.2.4 of Backstage.
 ### Any version less than Release 2, is no longer supported.
 
+### Release 2.1.0 adds the  iac-support-frontend plugin-in
+
 ### Using
 
 1. Go to the  root directory of the Backstage app you created (the default is the backstage dir, so I'll use that as a reference here).
-2. Type `yarn --cwd packages/backend add @paulpogo/plugin-catalog-backend-module-iac-support` to install the plugin (note the package name change for release 2). Ensure that the plugin has installed by ensuring you see the following 
+2. Type `yarn --cwd packages/backend add @paulpogo/plugin-catalog-backend-module-iac-support@latest` to install the plugin (note the package name change for release 2). Ensure that the plugin has installed by ensuring you see the following 
 ```success Saved lockfile.
 success Saved 3 new dependencies.
 info Direct dependencies
@@ -32,6 +35,16 @@ info All dependencies
 └─ app@0.0.0
 ✨  Done in 13.49s. 
 ```
+3. For the front-end component type `yarn --cwd packages/app add @paulpogo/plugin-iac-support-frontend@latest`
+```success Saved lockfile.
+success Saved 1 new dependency.
+info Direct dependencies
+info All dependencies
+└─ @paulpogo/plugin-iac-support-frontend@0.0.84
+✨  Done in 14.45s.
+```
+
+
 
 3. Modify packages/backend/src/plugins/index.ts ([as per the migration guide](https://backstage.io/docs/backend-system/building-backends/migrating#migrating-the-index-file)) to include a reference to our new processor:
    ```// catalog plugin
