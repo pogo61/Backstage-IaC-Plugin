@@ -31,7 +31,7 @@ spec:
   - iam_self_management_policy_name_prefix
   - aws_account_id
   - tags
-  subcomponentOf: iam
+  subcomponentOf: resourcecomponent:iam
   type: terraform
 ---
 apiVersion: backstage.io/v1alpha1

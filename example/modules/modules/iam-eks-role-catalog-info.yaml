@@ -28,7 +28,7 @@ spec:
   - max_session_duration
   - allow_self_assume_role
   - assume_role_condition_test
-  subcomponentOf: iam
+  subcomponentOf: resourcecomponent:iam
   type: terraform
 ---
 apiVersion: backstage.io/v1alpha1

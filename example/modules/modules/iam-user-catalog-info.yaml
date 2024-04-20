@@ -35,7 +35,7 @@ spec:
   - permissions_boundary
   - policy_arns
   - tags
-  subcomponentOf: iam
+  subcomponentOf: resourcecomponent:iam
   type: terraform
 ---
 apiVersion: backstage.io/v1alpha1

@@ -28,7 +28,7 @@ spec:
   - audience
   - subjects
   - provider_url
-  subcomponentOf: iam
+  subcomponentOf: resourcecomponent:iam
   type: terraform
 ---
 apiVersion: backstage.io/v1alpha1

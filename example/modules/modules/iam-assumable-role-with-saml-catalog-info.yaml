@@ -31,7 +31,7 @@ spec:
   - force_detach_policies
   - allow_self_assume_role
   - trusted_role_actions
-  subcomponentOf: iam
+  subcomponentOf: resourcecomponent:iam
   type: terraform
 ---
 apiVersion: backstage.io/v1alpha1

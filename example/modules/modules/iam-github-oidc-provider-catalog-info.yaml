@@ -19,7 +19,7 @@ spec:
   - client_id_list
   - url
   - additional_thumbprints
-  subcomponentOf: iam
+  subcomponentOf: resourcecomponent:iam
   type: terraform
 ---
 apiVersion: backstage.io/v1alpha1
