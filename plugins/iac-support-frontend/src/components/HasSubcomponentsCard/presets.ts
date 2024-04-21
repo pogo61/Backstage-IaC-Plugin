@@ -32,5 +32,17 @@ export const resComponentEntityHelpLink: string =
 export const asResComponentEntities = (entities: Entity[]): ComponentEntity[] =>
   entities as ComponentEntity[];
 
+export const componentEntityColumns: TableColumn<ComponentEntity>[] = [
+  EntityTable.columns.createEntityRefColumn({ defaultKind: 'Component' }),
+  EntityTable.columns.createOwnerColumn(),
+  EntityTable.columns.createSpecTypeColumn(),
+  EntityTable.columns.createSpecLifecycleColumn(),
+  EntityTable.columns.createMetadataDescriptionColumn(),
+];
+export const componentEntityHelpLink: string =
+  'https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component';
+export const asComponentEntities = (entities: Entity[]): ComponentEntity[] =>
+  entities as ComponentEntity[];
+
 
 
