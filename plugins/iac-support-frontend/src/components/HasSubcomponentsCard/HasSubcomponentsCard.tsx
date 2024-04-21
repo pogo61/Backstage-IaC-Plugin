@@ -36,6 +36,7 @@ export interface HasSubcomponentsCardProps {
 }
 
 
+// @ts-ignore
 export function HasSubcomponentsCard(props: HasSubcomponentsCardProps) {
   if ( asResComponentEntities[Symbol.hasInstance]) {
     const {
@@ -57,7 +58,9 @@ export function HasSubcomponentsCard(props: HasSubcomponentsCardProps) {
             tableOptions={tableOptions}
         />
     );
-  } else if( asComponentEntities[Symbol.hasInstance]) {
+  }
+
+  if( asComponentEntities[Symbol.hasInstance]) {
     const {
       variant = 'gridItem',
       tableOptions = {},
@@ -74,26 +77,6 @@ export function HasSubcomponentsCard(props: HasSubcomponentsCardProps) {
             asRenderableEntities={asComponentEntities}
             emptyMessage=""
             emptyHelpLink={componentEntityHelpLink}
-            tableOptions={tableOptions}
-        />
-    );
-  } else {
-    const {
-      variant = 'gridItem',
-      tableOptions = {},
-      title = 'Has subcomponents',
-      relationType = 'hasPart'
-    } = props;
-    return (
-        <RelatedEntitiesCard
-            variant={variant}
-            title={title}
-            entityKind="ResourceComponent"
-            relationType={relationType}
-            columns={resComponentEntityColumns}
-            asRenderableEntities={asResComponentEntities}
-            emptyMessage="No subcomponent is part of this component"
-            emptyHelpLink="https://backstage.io/docs/features/software-catalog/descriptor-format#specsubcomponentof-optional"
             tableOptions={tableOptions}
         />
     );
