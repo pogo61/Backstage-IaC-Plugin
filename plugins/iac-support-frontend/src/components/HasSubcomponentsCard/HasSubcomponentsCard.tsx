@@ -16,7 +16,7 @@
 
 // import {RELATION_HAS_PART,} from '@backstage/catalog-model';
 import {InfoCardVariants, TableOptions} from '@backstage/core-components';
-import React from 'react';
+import React from 'react'
 import {RelatedEntitiesCard} from '@backstage/plugin-catalog';
 import {
   asResComponentEntities,
@@ -36,16 +36,18 @@ export interface HasSubcomponentsCardProps {
 }
 
 
-// @ts-ignore
+
 export function HasSubcomponentsCard(props: HasSubcomponentsCardProps) {
-  if ( asResComponentEntities[Symbol.hasInstance]) {
+  let content: React.JSX.Element[];
+  content = [];
+  if (asResComponentEntities[Symbol.hasInstance]) {
     const {
       variant = 'gridItem',
       tableOptions = {},
       title = 'Has subcomponents',
       relationType = 'hasPart'
     } = props;
-    return (
+    content.push(
         <RelatedEntitiesCard
             variant={variant}
             title={title}
@@ -56,29 +58,29 @@ export function HasSubcomponentsCard(props: HasSubcomponentsCardProps) {
             emptyMessage=""
             emptyHelpLink={resComponentEntityHelpLink}
             tableOptions={tableOptions}
-        />
-    );
-  }
-
-  if( asComponentEntities[Symbol.hasInstance]) {
+        />);
+  }  else {
     const {
       variant = 'gridItem',
       tableOptions = {},
       title = 'Has subcomponents',
       relationType = 'hasPart'
     } = props;
-    return (
+    content.push(
         <RelatedEntitiesCard
             variant={variant}
             title={title}
-            entityKind="ResourceComponent"
+            entityKind="Component"
             relationType={relationType}
             columns={componentEntityColumns}
             asRenderableEntities={asComponentEntities}
             emptyMessage=""
             emptyHelpLink={componentEntityHelpLink}
             tableOptions={tableOptions}
-        />
-    );
+        />);
   }
+  return (
+      <>{content}</>
+    );
 }
+

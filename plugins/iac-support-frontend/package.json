@@ -4,7 +4,7 @@
   "engines": {
     "node": "18 || 20"
   },
-  "version": "0.0.85",
+  "version": "0.0.89",
   "license": "MIT",
   "main": "dist/index.esm.js",
   "types": "dist/index.d.ts",
