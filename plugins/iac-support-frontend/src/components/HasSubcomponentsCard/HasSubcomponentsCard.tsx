@@ -35,8 +35,6 @@ export interface HasSubcomponentsCardProps {
   relationType?: string;
 }
 
-
-
 export function HasSubcomponentsCard(props: HasSubcomponentsCardProps) {
   let content: React.JSX.Element[];
   content = [];
@@ -83,4 +81,3 @@ export function HasSubcomponentsCard(props: HasSubcomponentsCardProps) {
       <>{content}</>
     );
 }
-
