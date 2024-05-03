@@ -76,3 +76,5 @@ The example folder contains a hierarchy of catalog-info.yaml files that were gen
 **Note: the new entities will not show up in your "Home" page Component drop-down list until you create at least one of them**
 
 **Please look out for a [Medium Article](https://medium.com/@paulpogonoski/backstage-iac-support-392f34ea118e) that describes using this in detail**
+
+**Lastly, there is a  [Terraform Importer](https://github.com/pogo61/backstage-terraform-importer) written in Python that will create the requisite YAML files required for this plugin**
